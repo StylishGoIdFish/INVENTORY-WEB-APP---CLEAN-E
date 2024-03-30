@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Items Here!</title>
+    <link rel = "stylesheet" href = "assests/css/form.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+        } );
+    </script>
+</head>
+<body>
+    <header style = "
+        color: #333333; 
+        position: relative;
+        font-size: 30px; 
+        font-weight:bold;
+        background-color: rgb(255, 255, 255);
+        border: 5px solid #1ccb85;
+        border-radius: 20px ; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 99.5%;">
+        <a href = "home.html"><img src = "assests/images/cleanE logo.png" style = "width:150px; margin: 10px; " > </a>
+    </header>
+    
+    <div id = "tabs">
+
+        <ul>
+            <li><a href="#tabs-1">Search Items By Type</a></li>
+            <li><a href="#tabs-2">Update By Type/Name</a></li> 
+        </ul>
+        
+        <div id = "tabs-1">
+            <form class="trackType">
+                <script src="bundle.js"></script>
+
+                <h1>Query By Name/Type</h1>
+                <input type="text" id="itemType" placeholder="Enter Item Type">
+                <button type = "submit">Query</button>
+                
+                <button id="exportBtn" onclick = "tableToCSV()">Export Data to CSV</button>
+
+                        <script> 
+                            function tableToCSV() {
+                            
+                            // Variable to store the final csv data
+                            let csv_data = [];
+
+                            // Get each row data
+                            let rows = document.getElementsByTagName('tr');
+                            for (let i = 0; i < rows.length; i++) {
+
+                                // Get each column data
+                                let cols = rows[i].querySelectorAll('td,th');
+
+                                // Stores each csv row data
+                                let csvrow = [];
+                                for (let j = 0; j < cols.length; j++) {
+
+                                    // Get the text data of each cell of
+                                    // a row and push it to csvrow
+                                    csvrow.push(cols[j].innerHTML);
+                                }
+
+                                // Combine each column value with comma
+                                csv_data.push(csvrow.join(","));
+                            }
+                            // Combine each row data with new line character
+                            csv_data = csv_data.join('\n');
+
+                            downloadCSVFile(csv_data);
+                            
+                            }
+                            function downloadCSVFile(csv_data) {
+                                CSVFile = new Blob([csv_data], { type: "text/csv" });
+                                let temp_link = document.createElement('a');
+                                temp_link.download = "queryData.csv";
+                                let url = window.URL.createObjectURL(CSVFile);
+                                temp_link.href = url;
+                                temp_link.style.display = "none";
+                                document.body.appendChild(temp_link);
+                                temp_link.click();
+                                document.body.removeChild(temp_link);
+                            }
+                        </script>
+
+                <div id="output"></div>
+            </form>
+            
+             
+              
+        </div>
+
+        <div id = "tabs-2">
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

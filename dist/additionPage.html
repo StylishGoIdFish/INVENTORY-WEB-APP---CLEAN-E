@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean-E Inventory Managment Web-App : ADD ITEM</title>
+    <link rel = "stylesheet" href = "assests/css/form.css">
+</head>
+<body>
+    <header style = "
+        color: #333333; 
+        position: relative;
+        font-size: 30px; 
+        font-weight:bold;
+        background-color: rgb(255, 255, 255);
+        border: 5px solid #1ccb85;
+        border-radius: 20px ; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 99.5%;">
+        <a href = "home.html"><img src = "assests/images/cleanE logo.png" style = "width:150px; margin: 10px; " > </a>
+    </header>
+
+    
+    <form class = "addForm">
+        <div class = "addThingHere">
+            <h3>Enter item details to ADD it to the System!</h3>
+            <label>Item name/type: </label><input type = "text" name = "itemType" required></input></br>
+            <label>Quantity:  </label><input type = "text" name = "quantity" required></input></br>
+            <label>Item description </label><input type = "text" name = "desc"></input></br>
+            <label>Manufacturer </label><input type = "text" name = "vendor" required></input></br>
+            <label>Location </label><input type = "text" name = "location" required></input></br>
+            <label>Part No. </label><input type = "text" name = "partNum" required></input></br>
+            <label>Who are you?</label> </label><input type = "text" name = "personUpdate" required></input>
+            <input type = "submit"></input>
+            <input type = "button" class = "logout" value = "Log Out!"></input>
+        </div>
+    </form>
+    
+    <script src = "bundle.js"></script>
+</body>
+</html>

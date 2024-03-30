@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="This is the Clean-E Inventory Management and Tracking Website!">
+    <title>Clean-E Inventory Managment Web-App</title>
+</head>
+<style>
+    .hero-image {
+        background-image: linear-gradient(rgba(253, 253, 253, 1), rgba(0, 0, 0, 0.5)), url("assests/images/warehouse.jpg");
+        border-bottom: #333333 10px solid;
+
+    /* Set a specific height */
+        height: 300px;
+
+    /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .navButton{
+        padding: 1%;
+        margin-left: 2%;
+        margin-right: 2%;
+        transition-duration: 0.4s;
+        background-color: #1ccb85;
+        margin-top:50px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: aliceblue;
+        height: 20%; width: 20%;
+        border:#333333 0px solid;
+        border-radius: 20px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .navButton:hover{
+        background-color: #1ccb85;
+        box-shadow: 0 8px 16px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(215, 255, 226)
+    }
+    .icon-button{
+        transition-duration: 0.4s;
+        height: 50px; width: 50px;
+        filter: drop-shadow(4px 4px 4px black);
+
+    }
+    .icon-button:hover{
+        filter: drop-shadow(4px 4px 4px rgb(194, 252, 185));
+
+    }
+    .navBarStyle{
+        width : 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flow-root;
+    }
+
+</style>
+<body>
+    
+    <header style = "
+        color: #333333; 
+        position: relative;
+        font-size: 30px; 
+        font-weight:bold;
+        background-color: rgb(255, 255, 255);
+        border: 5px solid #1ccb85;
+        border-radius: 20px ; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 99.5%;">
+        <a href = "home.html"><img src = "assests/images/cleanE logo.png" style = "width:150px; margin: 10px; " > </a>
+        <div style="position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);">
+        Inventory Management</div>
+    </header>
+
+    <hr style = "border: 8px solid #6cc396; border-radius: 20px;">
+    <hr style = "border: 6px solid #98d5b6; border-radius: 20px;">
+    <hr style = "border: 4px solid #98d5b6; border-radius: 20px;">
+    <nav class="hero-image">
+        <div class = "navBarStyle">
+        <button class = "navButton">Add Inventory<br/><a href = "additionPage.html"><img src = "assests/images/plusImage.png" class = "icon-button"></a></button>
+        <button class = "navButton">Delete Inventory<br/><a href = "deletionPage.html"><img src = "assests/images/minusImage.png" class = "icon-button"></a></button>
+        <button class = "navButton">Edit Inventory<br/><a href = "updatePage.html"><img src = "assests/images/editImage.png" class = "icon-button"></a></button>
+        <button class = "navButton">Track Inventory<br/><a href = "tracking.html"><img src = "assests/images/mapImage.png" class = "icon-button"></a></button>
+        </div>
+    </nav>
+    
+</body>
+</html>

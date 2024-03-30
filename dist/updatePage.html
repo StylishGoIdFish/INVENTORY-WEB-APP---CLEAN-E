@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean-E Inventory Managment Web-App : UPDATE ITEM</title>
+    <link rel = "stylesheet" href = "assests/css/form.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+        } );
+    </script>
+</head>
+
+<body>
+    <header style = "
+        color: #333333; 
+        position: relative;
+        font-size: 30px; 
+        font-weight:bold;
+        background-color: rgb(255, 255, 255);
+        border: 5px solid #1ccb85;
+        border-radius: 20px ; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 99.5%;">
+        <a href = "home.html"><img src = "assests/images/cleanE logo.png" style = "width:150px; margin: 10px; " > </a>
+    </header>
+
+
+
+    <div id = "tabs">
+
+        <ul>
+            <li><a href="#tabs-1">Update By ID</a></li>
+            <li><a href="#tabs-2">Update By Type/Name</a></li> 
+        </ul>
+
+        <form id = "tabs-1"class = "updateFormIDVER">
+            <div class = "updateThingHere">
+                <h3>UPDATING FORM: Enter the item ID and update the form's values (type 'same' in the box if you want to keep the old value)!</h3>
+                <label>ITEM ID: </label><input type = "text" name = "id" required></input></br>
+                <label>Updated Item name/type: </label><input type = "text" name = "itemType" required></input></br>
+                <label>Updated Quantity:  </label><input type = "text" name = "quantity" required></input></br>
+                <label>Updated Manufacturer </label><input type = "text" name = "vendor" required></input></br>
+                <label>Updated Location </label><input type = "text" name = "location" required></input></br>
+                <label>Updated Part NO </label><input type = "text" name = "partNum" required></input></br>
+                <label>Who are you?</label> </label><input type = "text" name = "personUpdate" required></input>
+                <label>Item Desc.</label> </label><input type = "text" name = "desc" required></input>
+                <input type = "submit">Update item using ID!</input>
+                <input type = "button" class = "logout">Log Out</input>
+            </div>
+        </form>
+        <form id = "tabs-2" class = "updateFormTYPEVER">
+            <div class = "updateThingHere">
+                <h3>UPDATING FORM: Enter the item type! Then the values below will bulk update every instance of that type!</h3>
+                <label>Query this Item name/type: </label><input type = "text" name = "itemType" required></input></br>
+                <label>Who are you?</label> </label><input type = "text" name = "personUpdate" required></input>
+                <label>Updated Item name/type: </label><input type = "text" name = "itemTypeUpdate" required></input></br>
+                <label>Updated Quantities:  </label><input type = "text" name = "quantity" required></input></br>
+                <label>Updated Vendor/seller </label><input type = "text" name = "vendor" required></input></br>
+                <input type = "submit"></input>
+                <input type = "button" class = "logout" value = "Log Out!"></input>
+            </div>
+        </form>
+    </div>
+    <script src = "bundle.js"></script>
+</body>
